@@ -20,7 +20,7 @@ const Contact = () => {
           <ul>
             <li><a href='https://github.com/emanuelefranceschini' alt='_blank'><IoLogoGithub /> github</a></li>
             <li><a href='https://www.freecodecamp.org/emanuelefranceschini' alt='_blank'><FaFreeCodeCamp /> freecodecamp</a></li>
-            <li><a href='' alt='_blank'><IoLogoLinkedin /> linkedIn</a></li>
+            <li><a href='https://www.linkedin.com/in/emanuele-franceschini/' alt='_blank'><IoLogoLinkedin /> linkedIn</a></li>
             <li><a href="mailto:ef96work@gmail.com" alt='_blank'><IoMail /> ef96work@gmail.com</a></li>
           </ul>
       </div>
