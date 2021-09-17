@@ -46,8 +46,8 @@ const Projects = () => {
             <div>
               <h3>Treasure Hunt</h3>
               <ButtonGroup size='small' aria-label="small outlined button group">
-                <Button className={buttonClass.root} href='https://emanuelefranceschini.github.io/arcade-game/' target='_blank' rel="noreferrer">site</Button>
-                <Button className={buttonClass.root} href='https://github.com/emanuelefranceschini/arcade-game' target='_blank' rel='noreferrer'>code</Button>
+                <Button className={buttonClass.root} href='https://emanuelefranceschini.github.io/treasure-hunt/' target='_blank' rel="noreferrer">site</Button>
+                <Button className={buttonClass.root} href='https://github.com/emanuelefranceschini/treasure-hunt' target='_blank' rel='noreferrer'>code</Button>
               </ButtonGroup>
             </div>
             <p>Go back in time with this vintage arcade machine simulation.<br /><br /><b>Built with:</b> JS-CSS-HTML.
