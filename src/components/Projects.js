@@ -30,7 +30,7 @@ const Projects = () => {
       <div className='projects-wrapper'>
         <h2 className='projects-title'>My projects</h2>
           <article>
-            <img src='images/sporthub-img.svg' alt=''/>
+            <img src='images/sporthub.svg' alt=''/>
             <div>
               <h3>SportHub</h3>
               <ButtonGroup size='small' aria-label="small outlined button group">
@@ -42,7 +42,7 @@ const Projects = () => {
             </p>
           </article>
           <article>
-            <img src='images/arcade-game-img.svg' alt=''/>
+            <img src='images/treasure-hunt.svg' alt=''/>
             <div>
               <h3>Treasure Hunt</h3>
               <ButtonGroup size='small' aria-label="small outlined button group">
