@@ -7,6 +7,7 @@ const Context = React.createContext();
 const ContextAPI = ({ children }) => {
   const location = useLocation()
   const history = useHistory()
+  
   // -- Framer Motion Sections Variant Animation --
   const fadeVariant = {
   initial: {opacity: 0}, 
@@ -18,7 +19,6 @@ const ContextAPI = ({ children }) => {
   const paths = ['/', '/projects', '/contact']
 
   const changeRoute = (e) => {
-    console.log(e.currentTarget)
     e.currentTarget.classList.contains('up') ? history.push(paths[paths.indexOf(location.pathname) - 1]) : history.push(paths[paths.indexOf(location.pathname) + 1])
   }
 
