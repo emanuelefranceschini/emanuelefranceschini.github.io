@@ -7,7 +7,7 @@
   --h1FontSize: calc(18px + 3.5vmax);
   --h2FontSize: calc(14px + 2vmax);
   --h3FontSize: calc(14px + 1vmax);
-  --textsFontSize: calc(15px + 0.15vmax);
+  --textsFontSize: calc(14px + 0.4vmax);
   --titleFontFamily: 'Big Shoulders Stencil Display', cursive;
   --textFontFamily: 'Lato', sans-serif;;
 }
@@ -16,11 +16,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html, body, #root {
   height: 100%;
   width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: calc(5px + 0.3vmax);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(56, 56, 56);
+  border-radius: 10px;
 }
 
 body {
@@ -95,7 +105,7 @@ h2 {
 }
 
 .arrow {
-  flex: 0 1 10%;
+  flex: 0 1 auto;
   font-size: var(--h2FontSize);
   color: white;
   z-index: 0;
@@ -264,6 +274,14 @@ h1 {
   .links {
   color: white;
 }
+
+  .main {
+    padding: 8vmax 1vmax 2vmax 1vmax;
+  }
+
+  .about-section {
+    padding-top: 12vmax;
+  }
 
   .projects-wrapper {
     grid-template-columns: 25% 25%;
