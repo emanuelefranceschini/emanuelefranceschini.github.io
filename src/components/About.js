@@ -26,6 +26,7 @@ const Home = () => {
             <li>React.js</li>
             <li>Node.js</li>
             <li>Express</li>
+            <li>Wordpress</li>
           </ul>
         </article>
         <article>
@@ -33,7 +34,7 @@ const Home = () => {
           <ul>
             <li>Git</li>
             <li>Github</li>
-            <li>Heroku</li>
+            <li>Webpack</li>
             <li>Material-ui</li>
             <li>Framer-motion</li>
           </ul>

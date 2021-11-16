@@ -30,6 +30,28 @@ const Projects = () => {
       <div className='projects-wrapper'>
         <h2 className='projects-title'>My projects</h2>
           <article>
+            <img src='images/personal-website.png' alt=''/>
+            <div>
+              <h3>Freelance Personal Website Project</h3>
+              <ButtonGroup size='small' aria-label="small outlined button group">
+                <Button className={buttonClass.root} href='https://www.emanueledaquino.net/' target='_blank' rel="noreferrer">site</Button>
+              </ButtonGroup>
+            </div>
+            <p>A website showcasing a client’s digital marketing consultation services and articles.<br /><br /><b>Built with:</b> React.js-CSS.
+            </p>
+          </article>
+          <article>
+            <img src='images/restaurant.png' alt=''/>
+            <div>
+              <h3>Freelance Business Website Project</h3>
+              <ButtonGroup size='small' aria-label="small outlined button group">
+                <Button className={buttonClass.root} href='https://pizzeriadapagni.netlify.app/' target='_blank' rel="noreferrer">site</Button>
+              </ButtonGroup>
+            </div>
+            <p>A restaurant’s website where people can find its menu, services and directions.<br /><br /><b>Built with:</b> React.js-Material-UI.
+            </p>
+          </article>
+          <article>
             <img src='images/sporthub.svg' alt=''/>
             <div>
               <h3>SportHub</h3>
@@ -38,19 +60,7 @@ const Projects = () => {
                 <Button className={buttonClass.root} href='https://github.com/emanuelefranceschini/sporthub' target='_blank' rel='noreferrer'>code</Button>
               </ButtonGroup>
             </div>
-            <p>Search & save sport suggestions in your area.<br /><br /><b>Built with:</b> React.js-Node.js-Express-CSS.
-            </p>
-          </article>
-          <article>
-            <img src='images/treasure-hunt.svg' alt=''/>
-            <div>
-              <h3>Treasure Hunt</h3>
-              <ButtonGroup size='small' aria-label="small outlined button group">
-                <Button className={buttonClass.root} href='https://emanuelefranceschini.github.io/treasure-hunt/' target='_blank' rel="noreferrer">site</Button>
-                <Button className={buttonClass.root} href='https://github.com/emanuelefranceschini/treasure-hunt' target='_blank' rel='noreferrer'>code</Button>
-              </ButtonGroup>
-            </div>
-            <p>Go back in time with this vintage arcade machine simulation.<br /><br /><b>Built with:</b> JS-CSS-HTML.
+            <p>Search & save sport suggestions in your area.<br /><br /><b>Built with:</b> React.js-CSS-Node.js-Express.
             </p>
           </article>
       </div>
