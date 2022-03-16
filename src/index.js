@@ -1,17 +1,17 @@
 import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
 import ReactDOM from 'react-dom'
 import ContextAPI from './components/Context'
-import './index.css'
 import App from './App'
+import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider } from '@mui/material/styles'
+import theme from './styles/theme'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-    <ContextAPI>
+  <ContextAPI>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
       <App />
-    </ContextAPI>
-    </BrowserRouter>
-  </React.StrictMode>,
+    </ThemeProvider>
+  </ContextAPI>,
   document.getElementById('root')
 )

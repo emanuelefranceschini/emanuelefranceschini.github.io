@@ -1,42 +1,36 @@
-import { Route, Switch } from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion'
-import Header from './components/Header'
-import About from './components/About'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
+import Header from './components/Header/Header'
+import Footer from './components/Footer'
+import BackToTopBtn from './components/Buttons/BackToTopBtn'
+import About from './components/Sections/About'
+import Skills from './components/Sections/Skills'
+import Work from './components/Sections/Work'
+import Contact from './components/Sections/Contact'
+import Container from '@mui/material/Container'
+import Box from '@mui/material/Box'
+import backgroundImg from './assets/images/background1.svg'
 
 const App = () => {
-
   return (
-    <>
+    <Box
+      sx={{
+        backgroundColor: 'black',
+        backgroundImage: `url(${backgroundImg})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat repeat'
+      }}
+    >
       <Header />
-      <Route render={({ location }) => (
-        <AnimatePresence exitBeforeEnter initial={true}>
-          <Switch location={location} key={location.pathname} >
-            <Route path='/' exact render={() => (
-              <>
-                <About />
-              </>
-            )}
-            />
-            <Route path='/projects' render={() => (
-              <>
-                <Projects />
-              </>
-            )}
-            />
-            <Route path='/contact' render={() => (
-              <>
-                <Contact />
-              </>
-            )}
-            />
-          </Switch>
-          </AnimatePresence>
-      )}
-      />
-    </>
+
+      <Container>
+        <About />
+        <Skills />
+        <Work />
+        <Contact />
+      </Container>
+      <BackToTopBtn />
+      <Footer />
+    </Box>
   )
 }
 
-export default App;
+export default App
