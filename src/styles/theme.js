@@ -142,9 +142,22 @@ let theme = createTheme({
   },
   typography: {
     fontFamily: ['Ubuntu', 'Robot', 'Helvetica', 'sans-serif'].join(','),
-    h1: {
+    title: {
+      fontSize: '40px',
       fontFamily: 'Audiowide',
-      textShadow: '0 0 10px rgba(255,255,255, 0.8)'
+      textShadow: '0 0 10px rgba(255,255,255, 0.8)',
+      '@media (min-width: 600px)': {
+        fontSize: '48px'
+      },
+      '@media (min-width: 900px)': {
+        fontSize: '56px'
+      },
+      '@media (min-width: 1200px)': {
+        fontSize: '64px'
+      },
+      '@media (min-width: 1500px)': {
+        fontSize: '72px'
+      }
     },
     h2: {
       fontFamily: 'Audiowide',

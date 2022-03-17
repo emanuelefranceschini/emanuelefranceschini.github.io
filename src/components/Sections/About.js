@@ -32,7 +32,7 @@ const Home = () => {
           sx={{ minHeight: 'inherit' }}
         >
           <Grid item>
-            <Typography variant='h1'>Emanuele Franceschini</Typography>
+            <Typography variant='title'>Emanuele Franceschini</Typography>
           </Grid>
           <Grid item>
             <Typography variant='h6' color='text.secondary'>

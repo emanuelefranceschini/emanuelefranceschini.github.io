@@ -25,7 +25,7 @@ const NavBar = () => {
     >
       <NavList>
         {sections.map((el) => (
-          <MenuItem key={el}>
+          <MenuItem key={`drawer_${el}`}>
             <NavLink href={`#${el}`} onClick={() => toggleMenu(false)}>
               {el}
             </NavLink>
@@ -36,7 +36,7 @@ const NavBar = () => {
   ) : (
     <NavList>
       {sections.map((el) => (
-        <MenuItem>
+        <MenuItem key={el}>
           <NavLink href={`#${el}`} onClick={() => toggleMenu(false)}>
             {el}
           </NavLink>

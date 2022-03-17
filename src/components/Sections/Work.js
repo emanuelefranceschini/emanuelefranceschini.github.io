@@ -66,7 +66,7 @@ const Work = () => {
                           >
                             {({ TransitionProps }) => (
                               <Fade {...TransitionProps} timeout={200}>
-                                <Card sx={{ p: 2, ml: 1 }}>
+                                <Card sx={{ p: 2, m: 1 }}>
                                   <Typography
                                     variant='subtitle2'
                                     color='text.secondary'
