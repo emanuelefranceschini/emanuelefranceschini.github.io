@@ -12,7 +12,8 @@ import Snackbar from '@mui/material/Snackbar'
 import Alert from '@mui/material/Alert'
 
 const Contact = () => {
-  const { WrapperSection, formValuesInitialState } = useMyContext()
+  const { WrapperSection, formValuesInitialState, opacityVariant } =
+    useMyContext()
   const [message, setMessage] = useState({
     type: 'error',
     errorMessage: 'Please fill all required fields',
@@ -67,8 +68,9 @@ const Contact = () => {
     <WrapperSection id='contact'>
       <Typography variant='h2'>Contact</Typography>
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        variants={opacityVariant}
+        initial='initial'
+        whileInView='sectionsWhileInView'
         viewport={{ once: true }}
       >
         <Card

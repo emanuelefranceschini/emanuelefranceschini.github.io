@@ -5,12 +5,12 @@ import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 
 const Home = () => {
-  const { TextLink } = useMyContext()
+  const { TextLink, opacityVariant } = useMyContext()
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 2 }}
+      variants={opacityVariant}
+      initial='initial'
+      animate='heroAnimate'
     >
       <Box
         id='about'

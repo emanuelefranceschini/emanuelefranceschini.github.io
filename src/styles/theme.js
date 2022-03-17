@@ -97,6 +97,7 @@ let theme = createTheme({
       styleOverrides: {
         root: {
           backdropFilter: 'blur(20px)',
+          webkitBackdropFilter: 'blur(20px)',
           backgroundColor: 'rgba(30,30,30,0.3)'
         }
       }

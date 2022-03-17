@@ -17,6 +17,32 @@ import GitHub from '@mui/icons-material/GitHub'
 
 const Context = React.createContext()
 
+const opacityVariant = {
+  initial: { opacity: 0 },
+  heroAnimate: {
+    opacity: 1,
+    transition: { duration: 2 }
+  },
+  sectionsWhileInView: {
+    opacity: 1,
+    transition: { duration: 1 }
+  },
+  projectsWhileInView: (index) => ({
+    opacity: 1,
+    transition: {
+      delay: index / 3,
+      duration: 1
+    }
+  }),
+  skillsWhileInView: (index) => ({
+    opacity: 1,
+    transition: {
+      delay: index / 10,
+      duration: 1
+    }
+  })
+}
+
 const WrapperSection = styled(Box)(({ theme }) => ({
   marginBottom: theme.spacing(10),
   '@media (min-width: 600px)': {
@@ -217,7 +243,8 @@ const ContextAPI = ({ children }) => {
         NavBtn,
         profiles,
         work,
-        formValuesInitialState
+        formValuesInitialState,
+        opacityVariant
       }}
     >
       {children}

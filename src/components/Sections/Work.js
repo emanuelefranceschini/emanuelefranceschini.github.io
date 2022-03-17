@@ -17,7 +17,8 @@ import Fade from '@mui/material/Fade'
 import GppMaybeIcon from '@mui/icons-material/GppMaybe'
 
 const Work = () => {
-  const { WrapperSection, WrapperWorkExp, TextLink, work } = useMyContext()
+  const { WrapperSection, WrapperWorkExp, TextLink, work, opacityVariant } =
+    useMyContext()
   const [open, setOpen] = useState(false)
   const [anchorEl, setAnchorEl] = useState(null)
 
@@ -34,8 +35,9 @@ const Work = () => {
         {work.workExperiences.map((exp) => (
           <motion.div
             key={exp.title}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            variants={opacityVariant}
+            initial='initial'
+            whileInView='sectionsWhileInView'
             viewport={{ once: true }}
           >
             <Card>
@@ -56,13 +58,26 @@ const Work = () => {
                             color='secondary'
                             onMouseEnter={handlePopper}
                             onMouseLeave={handlePopper}
+                            onClick={handlePopper}
                             fontSize='small'
                           />
                           <Popper
                             open={open}
                             anchorEl={anchorEl}
-                            placement='right'
+                            placement='top-start'
                             transition
+                            modifiers={[
+                              {
+                                name: 'preventOverflow',
+                                enabled: true,
+                                options: {
+                                  altAxis: true
+                                }
+                              },
+                              {
+                                name: 'arrow'
+                              }
+                            ]}
                           >
                             {({ TransitionProps }) => (
                               <Fade {...TransitionProps} timeout={200}>
@@ -103,9 +118,10 @@ const Work = () => {
           <Grid key={el.title} item xs={12} sm={3.5}>
             <motion.div
               style={{ height: '100%' }}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ opacity: { delay: index / 3 } }}
+              variants={opacityVariant}
+              custom={index}
+              initial='initial'
+              whileInView='projectsWhileInView'
               viewport={{ once: true }}
             >
               <Card

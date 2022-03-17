@@ -36,7 +36,7 @@ const skills = [
 ]
 
 const Skills = () => {
-  const { WrapperSection } = useMyContext()
+  const { WrapperSection, opacityVariant } = useMyContext()
   const mQuery = useMediaQuery(useTheme().breakpoints.up('sm'), {
     noSsr: true
   })
@@ -45,11 +45,12 @@ const Skills = () => {
       <Typography variant='h2'>Skills</Typography>
       <Grid container gap={3}>
         {skills.map((el, index) => (
-          <Grid key={el.name} item xs={2.5}>
+          <Grid key={el.name} item xs={2.2} sm={2.5}>
             <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ opacity: { delay: index / 10 } }}
+              variants={opacityVariant}
+              custom={index}
+              initial='initial'
+              whileInView='skillsWhileInView'
               viewport={{ once: true }}
             >
               <Card>
