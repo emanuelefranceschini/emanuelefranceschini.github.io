@@ -1,6 +1,8 @@
-import { useState } from 'react'
-import { useMyContext } from '../Context'
 import { motion } from 'framer-motion'
+import { work } from '../../data/workSection'
+import { WrapperSection, WrapperWorkExp, TextLink } from '../styledComponents'
+import { opacityVariant } from '../../styles/motionVariants'
+import Carousel from '../Carousel'
 import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
@@ -12,21 +14,8 @@ import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
-import Popper from '@mui/material/Popper'
-import Fade from '@mui/material/Fade'
-import GppMaybeIcon from '@mui/icons-material/GppMaybe'
 
 const Work = () => {
-  const { WrapperSection, WrapperWorkExp, TextLink, work, opacityVariant } =
-    useMyContext()
-  const [open, setOpen] = useState(false)
-  const [anchorEl, setAnchorEl] = useState(null)
-
-  const handlePopper = (e) => {
-    setOpen(!open)
-    setAnchorEl(e.currentTarget)
-  }
-
   return (
     <WrapperSection id='work'>
       <Typography variant='h2'>Work</Typography>
@@ -41,73 +30,39 @@ const Work = () => {
             viewport={{ once: true }}
           >
             <Card>
-              <CardMedia image={exp.image} alt='' component='img' />
               <CardHeader title={exp.title} subheader={exp.role} />
-              <CardContent>
-                <List>
-                  {exp.list.map((item) => (
-                    <ListItem key={item.text}>
-                      <ListItemIcon>{item.icon}</ListItemIcon>
-                      <ListItemText
-                        sx={item.popper && { flexGrow: 0, mr: 1 }}
-                        primary={item.text}
-                      />
-                      {item.popper && (
-                        <>
-                          <GppMaybeIcon
-                            color='secondary'
-                            onMouseEnter={handlePopper}
-                            onMouseLeave={handlePopper}
-                            onClick={handlePopper}
-                            fontSize='small'
-                          />
-                          <Popper
-                            open={open}
-                            anchorEl={anchorEl}
-                            placement='top-start'
-                            transition
-                            modifiers={[
-                              {
-                                name: 'preventOverflow',
-                                enabled: true,
-                                options: {
-                                  altAxis: true
-                                }
-                              },
-                              {
-                                name: 'arrow'
-                              }
-                            ]}
-                          >
-                            {({ TransitionProps }) => (
-                              <Fade {...TransitionProps} timeout={200}>
-                                <Card sx={{ p: 2, m: 1 }}>
-                                  <Typography
-                                    variant='subtitle2'
-                                    color='text.secondary'
-                                  >
-                                    <i>{item.popper}</i>
-                                  </Typography>
-                                </Card>
-                              </Fade>
-                            )}
-                          </Popper>
-                        </>
-                      )}
-                    </ListItem>
-                  ))}
-                </List>
-              </CardContent>
-              <CardActions>
-                <TextLink
-                  neoncolor='neon'
-                  href={exp.url}
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Website
-                </TextLink>
-              </CardActions>
+              <List>
+                {exp.list.map((item) => (
+                  <ListItem key={item.text}>
+                    <ListItemIcon>{item.icon}</ListItemIcon>
+                    <ListItemText primary={item.text} />
+                  </ListItem>
+                ))}
+              </List>
+
+              <Carousel
+                slides={exp.projects.map((project) => (
+                  <Card
+                    sx={{
+                      margin: '16px 0',
+                      backgroundColor: 'rgba(40,40,40,0.3)'
+                    }}
+                  >
+                    <CardMedia image={project.image} alt='' component='img' />
+                    <CardHeader title={project.projectTitle} />
+                    <CardActions>
+                      <TextLink
+                        neoncolor='neon'
+                        href={project.url}
+                        target='_blank'
+                        rel='noreferrer'
+                      >
+                        Website
+                      </TextLink>
+                    </CardActions>
+                  </Card>
+                ))}
+              />
             </Card>
           </motion.div>
         ))}

@@ -1,8 +1,8 @@
-import { useMyContext } from '../Context'
+import { NavBtn } from '../styledComponents'
+import { profiles } from '../../data/profiles'
 import Link from '@mui/material/Link'
 
 const ProfileBtns = () => {
-  const { NavBtn, profiles } = useMyContext()
   return (
     <>
       {profiles.map((el) => (

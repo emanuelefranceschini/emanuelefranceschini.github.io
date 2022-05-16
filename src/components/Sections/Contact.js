@@ -1,5 +1,7 @@
 import { useState, useRef } from 'react'
-import { useMyContext } from '../Context'
+import { WrapperSection } from '../styledComponents'
+import { formValuesInitialState } from '../../data/contactSection'
+import { opacityVariant } from '../../styles/motionVariants'
 import emailjs from '@emailjs/browser'
 import { motion } from 'framer-motion'
 import Grid from '@mui/material/Grid'
@@ -12,8 +14,6 @@ import Snackbar from '@mui/material/Snackbar'
 import Alert from '@mui/material/Alert'
 
 const Contact = () => {
-  const { WrapperSection, formValuesInitialState, opacityVariant } =
-    useMyContext()
   const [message, setMessage] = useState({
     type: 'error',
     errorMessage: 'Please fill all required fields',

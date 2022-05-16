@@ -1,12 +1,13 @@
 import { useMyContext } from '../Context'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
+import { NavLink, NavList } from '../styledComponents'
 import Drawer from '@mui/material/Drawer'
 import MenuItem from '@mui/material/MenuItem'
 
 const sections = ['about', 'skills', 'work', 'contact']
 const NavBar = () => {
-  const { menu, toggleMenu, NavLink, NavList } = useMyContext()
+  const { menu, toggleMenu } = useMyContext()
   const mQuery = useMediaQuery(useTheme().breakpoints.down('sm'), {
     noSsr: true
   })

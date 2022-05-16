@@ -1,11 +1,11 @@
-import { useMyContext } from '../Context'
+import { TextLink } from '../styledComponents'
+import { opacityVariant } from '../../styles/motionVariants'
 import { motion } from 'framer-motion'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 
 const Home = () => {
-  const { TextLink, opacityVariant } = useMyContext()
   return (
     <motion.div
       variants={opacityVariant}
