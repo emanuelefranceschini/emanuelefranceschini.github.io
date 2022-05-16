@@ -1,12 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.275a6c09.css",
-    "main.js": "/static/js/main.e89c605e.js",
-    "static/media/businessWebsiteMockup-min.png": "/static/media/businessWebsiteMockup-min.95c6502ca05dbd6c1ce2.png",
-    "static/media/sporthubMockup-min.png": "/static/media/sporthubMockup-min.bf094decd7dd88644779.png",
-    "static/media/gematriaMockup-min.png": "/static/media/gematriaMockup-min.a48318c2c94350669015.png",
-    "static/media/personalWebsiteMockup-min.png": "/static/media/personalWebsiteMockup-min.e5a7c8b879164a0ad565.png",
+    "main.js": "/static/js/main.981f8fec.js",
+    "static/media/sporthubMockupMin.webp": "/static/media/sporthubMockupMin.73a5adbc15f31c73715c.webp",
     "static/media/ubuntu-all-400-normal.woff": "/static/media/ubuntu-all-400-normal.8629f83ad2c45e75a914.woff",
+    "static/media/personalWebsiteMockupMin.webp": "/static/media/personalWebsiteMockupMin.06feab377d71dda8d4af.webp",
+    "static/media/businessWebsiteMockupMin.webp": "/static/media/businessWebsiteMockupMin.c197019c332b8deabc58.webp",
+    "static/media/gematriaAimodelsMockupMin.webp": "/static/media/gematriaAimodelsMockupMin.3783e8771c96e9cd1a03.webp",
+    "static/media/gematriaWebsiteMockupMin.webp": "/static/media/gematriaWebsiteMockupMin.2569352f04f32f2baaf1.webp",
+    "static/media/gematriaComentionsMockupMin.webp": "/static/media/gematriaComentionsMockupMin.7d94375cf8bfaee31d44.webp",
+    "static/media/gematriaKeywordsMockupMin.webp": "/static/media/gematriaKeywordsMockupMin.80dce5993f34382fe3d2.webp",
     "static/media/ubuntu-latin-ext-400-normal.woff2": "/static/media/ubuntu-latin-ext-400-normal.9967dbf10fc3cb92edfb.woff2",
     "static/media/ubuntu-latin-400-normal.woff2": "/static/media/ubuntu-latin-400-normal.2f02effe392a63dc07a5.woff2",
     "static/media/ubuntu-cyrillic-ext-400-normal.woff2": "/static/media/ubuntu-cyrillic-ext-400-normal.80c010be16bde8b7e613.woff2",
@@ -35,10 +38,10 @@
     "static/media/arrowDown.svg": "/static/media/arrowDown.99be4c6d1ca2332f437f69d012d4b407.svg",
     "static/media/arrowUp.svg": "/static/media/arrowUp.d0285f605e4552a4306e787f94aa5530.svg",
     "main.275a6c09.css.map": "/static/css/main.275a6c09.css.map",
-    "main.e89c605e.js.map": "/static/js/main.e89c605e.js.map"
+    "main.981f8fec.js.map": "/static/js/main.981f8fec.js.map"
   },
   "entrypoints": [
     "static/css/main.275a6c09.css",
-    "static/js/main.e89c605e.js"
+    "static/js/main.981f8fec.js"
   ]
 }
