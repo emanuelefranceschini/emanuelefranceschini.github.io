@@ -3,7 +3,6 @@ import { work } from '../../data/workSection'
 import { WrapperSection, WrapperWorkExp, TextLink } from '../styledComponents'
 import { opacityVariant } from '../../styles/motionVariants'
 import Carousel from '../Carousel'
-import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
 import CardContent from '@mui/material/CardContent'
@@ -20,9 +19,9 @@ const Work = () => {
     <WrapperSection id='work'>
       <Typography variant='h2'>Work</Typography>
       <WrapperWorkExp>
-        <Typography variant='h4'>My Work Experience</Typography>
         {work.workExperiences.map((exp) => (
           <motion.div
+            id={exp.anchorLink}
             key={exp.title}
             variants={opacityVariant}
             initial='initial'
@@ -44,12 +43,17 @@ const Work = () => {
                 slides={exp.projects.map((project) => (
                   <Card
                     sx={{
-                      margin: '16px 0',
-                      backgroundColor: 'rgba(40,40,40,0.3)'
+                      height: '100%',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      backgroundColor: 'rgba(40,40,40,0.3)',
                     }}
                   >
                     <CardMedia image={project.image} alt='' component='img' />
                     <CardHeader title={project.projectTitle} />
+                    {project.projectDescr && <CardContent>
+                      <Typography>{project.projectDescr}</Typography>
+                    </CardContent>}
                     <CardActions>
                       <TextLink
                         neoncolor='neon'
@@ -67,50 +71,6 @@ const Work = () => {
           </motion.div>
         ))}
       </WrapperWorkExp>
-      <Typography variant='h4'>My Personal Projects</Typography>
-      <Grid container gap={3}>
-        {work.personalProjects.map((el, index) => (
-          <Grid key={el.title} item xs={12} sm={3.5}>
-            <motion.div
-              style={{ height: '100%' }}
-              variants={opacityVariant}
-              custom={index}
-              initial='initial'
-              whileInView='projectsWhileInView'
-              viewport={{ once: true }}
-            >
-              <Card
-                sx={{
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column'
-                }}
-              >
-                <CardMedia image={el.img} alt='' component='img' />
-                <CardHeader title={el.title} />
-                <CardContent>
-                  <Typography variant='body1' color='text.secondary'>
-                    {el.text.map((text) => text)}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  {el.links.map((link) => (
-                    <TextLink
-                      key={link.name}
-                      neoncolor={link.color}
-                      href={link.url}
-                      target='_blank'
-                      rel='noreferrer'
-                    >
-                      {link.name}
-                    </TextLink>
-                  ))}
-                </CardActions>
-              </Card>
-            </motion.div>
-          </Grid>
-        ))}
-      </Grid>
     </WrapperSection>
   )
 }

@@ -98,7 +98,8 @@ let theme = createTheme({
         root: {
           backdropFilter: 'blur(20px)',
           webkitBackdropFilter: 'blur(20px)',
-          backgroundColor: 'rgba(30,30,30,0.3)'
+          backgroundColor: 'rgba(30,30,30,0.3)',
+          overflow: 'visible'
         }
       }
     },

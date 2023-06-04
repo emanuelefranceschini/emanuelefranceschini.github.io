@@ -26,11 +26,19 @@ const Skills = () => {
               initial='initial'
               whileInView='skillsWhileInView'
               viewport={{ once: true }}
+              style={{
+                height: '100%'}}
             >
-              <Card>
+              <Card sx={{
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between'
+                  }}>
                 <CardMedia
                   sx={{
-                    height: '100%'
+                    height: 'auto',
+                    width: '100%'
                   }}
                   image={el.img}
                   alt={el.name}

@@ -1,6 +1,6 @@
-import personalWebsite from '../assets/images/work/personalWebsiteMockupMin.webp'
-import businessWebsite from '../assets/images/work/businessWebsiteMockupMin.webp'
-import sporthub from '../assets/images/work/sporthubMockupMin.webp'
+import grippedWebsite from '../assets/images/work/grippedWebsite.webp'
+import grippedStories from '../assets/images/work/grippedWebDevSuccessStoriesMockup.webp'
+import grippedResults from '../assets/images/work/grippedResults.webp'
 import gematria from '../assets/images/work/gematriaWebsiteMockupMin.webp'
 import aimodels from '../assets/images/work/gematriaAimodelsMockupMin.webp'
 import comentions from '../assets/images/work/gematriaComentionsMockupMin.webp'
@@ -13,8 +13,51 @@ import EqualizerIcon from '@mui/icons-material/Equalizer'
 export const work = {
   workExperiences: [
     {
+      title: 'Gripped',
+      role: 'Frontend Web Developer',
+      anchorLink: 'gripped',
+      list: [
+        {
+          icon: <ConstructionIcon color='secondary' />,
+          text: 'Built, maintained and launched several different websites and webpages to the highest possible standard.'
+        },
+        {
+          icon: <DesignServicesIcon color='secondary' />,
+          text: 'Leveraged creativity around new projects in order to come up with new solutions or improve existing ones.'
+        },
+        {
+          icon: <CableIcon color='secondary' />,
+          text: 'Maintained a strong focus on staying up-to-date with the latest industry trends and standards.'
+        },
+        {
+          icon: <EqualizerIcon color='secondary' />,
+          text: 'Consistently applied a data-driven approach to tackle problems and find effective solutions.'
+        }
+      ],
+      projects: [
+        {
+          projectTitle: 'Gripped Website',
+          image: grippedWebsite,
+          url: 'https://gripped.io/'
+        },
+        {
+          projectTitle: 'Gripped Web Dev Success Stories',
+          projectDescr: `Here's a page (I built it! 😁) showcasing some of Gripped Web Dev Success Stories that I was able to contribute to!`,
+          image: grippedStories,
+          url: 'https://gripped.io/b2b-website-design-agency/',
+        },
+        {
+          projectTitle: 'Gripped Results',
+          projectDescr: `Here are more success stories, some of which I was involved in!`,
+          image: grippedResults,
+          url: 'https://gripped.io/results/',
+        }
+      ]
+    },
+    {
       title: 'Gematria Technologies',
       role: 'Frontend Web Developer - Internship',
+      anchorLink: 'gematria-technologies',
       list: [
         {
           icon: <ConstructionIcon color='secondary' />,
@@ -47,70 +90,12 @@ export const work = {
         {
           projectTitle: 'Co-mentions Dashboard',
           image: comentions,
-          url: 'https://aimodels.gematria.tech'
+          url: 'https://comentions.gematria.tech'
         },
         {
           projectTitle: 'Keywords Dashboard',
           image: keywords,
-          url: 'https://aimodels.gematria.tech'
-        }
-      ]
-    }
-  ],
-  personalProjects: [
-    {
-      title: 'Freelance Personal Website',
-      img: personalWebsite,
-      text: [
-        "A website showcasing a client's digital marketing consultation services and articles.",
-        <br key='br0' />,
-        <br key='br1' />,
-        'Built with: React.js-CSS.'
-      ],
-      links: [
-        {
-          name: 'Website',
-          url: 'https://www.emanueledaquino.net/',
-          color: 'neon'
-        }
-      ]
-    },
-    {
-      title: 'Freelance Business Website',
-      img: businessWebsite,
-      text: [
-        "A restaurant's website where people can find its menu, services and directions..",
-        <br key='br2' />,
-        <br key='br3' />,
-        'Built with: React.js-Material-UI.'
-      ],
-      links: [
-        {
-          name: 'Website',
-          url: 'https://pizzeriadapagni.netlify.app/',
-          color: 'neon'
-        }
-      ]
-    },
-    {
-      title: 'SportHub',
-      img: sporthub,
-      text: [
-        'Search & save sport suggestions in your area.',
-        <br key='br4' />,
-        <br key='br5' />,
-        'Built with: React.js-CSS-Node.js-Express.'
-      ],
-      links: [
-        {
-          name: 'Website',
-          url: 'https://emanuelefranceschini.github.io/sporthub/',
-          color: 'neon'
-        },
-        {
-          name: 'Code',
-          url: 'https://github.com/emanuelefranceschini/sporthub',
-          color: 'secondary'
+          url: 'https://keywords.gematria.tech'
         }
       ]
     }

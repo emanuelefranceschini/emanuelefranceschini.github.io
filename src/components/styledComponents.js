@@ -18,15 +18,21 @@ export const WrapperSection = styled(Box)(({ theme }) => ({
 }))
 
 export const WrapperWorkExp = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: theme.spacing(2.5),
   marginBottom: theme.spacing(5),
   '@media (min-width: 600px)': {
-    marginBottom: theme.spacing(7.5)
+    marginBottom: theme.spacing(7.5),
+    gap: theme.spacing(3.5)
   },
   '@media (min-width: 900px)': {
-    marginBottom: theme.spacing(10)
+    marginBottom: theme.spacing(10),
+    gap: theme.spacing(5)
   },
   '@media (min-width: 1440px)': {
-    marginBottom: theme.spacing(15)
+    marginBottom: theme.spacing(15),
+    gap: theme.spacing(7.5)
   }
 }))
 

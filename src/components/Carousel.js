@@ -14,8 +14,8 @@ const Carousel = ({ slides }) => {
   }
   return (
     <VirtualizeSwipeableViews
-      style={{ padding: '0 10%' }}
-      slideStyle={{ padding: '0 8px' }}
+      style={{ padding: '16px 10%', cursor: 'grab' }}
+      slideStyle={{ padding: '0 8px', height: 'unset', overflow: 'hidden' }}
       slideRenderer={slideRenderer}
       enableMouseEvents
     />

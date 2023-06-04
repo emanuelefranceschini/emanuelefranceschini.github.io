@@ -7,15 +7,15 @@ import Arrow from '@mui/icons-material/ArrowCircleUp'
 const BackToTopBtn = () => {
   const [visible, setVisible] = useState(false)
 
-  const checkPosition = () => {
-    if (window.scrollY > window.innerHeight && !visible) {
-      setVisible(true)
-    } else if (window.scrollY < window.innerHeight && visible) {
-      setVisible(false)
-    }
-  }
 
   useEffect(() => {
+    const checkPosition = () => {
+      if (window.scrollY > window.innerHeight && !visible) {
+        setVisible(true)
+      } else if (window.scrollY < window.innerHeight && visible) {
+        setVisible(false)
+      }
+    }
     window.addEventListener('scroll', checkPosition)
     return () => {
       window.removeEventListener('scroll', checkPosition)
